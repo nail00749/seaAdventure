@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 1294535068265897156}
   - component: {fileID: 2763177571142685537}
   - component: {fileID: 125027758582114219}
+  - component: {fileID: 5216462427312668726}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -183,6 +184,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5216462427312668726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926639477857846910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.0232525, y: 1, z: 21.977291}
+  m_Center: {x: 0, y: -1.5, z: 0.0000019073486}
 --- !u!1 &1988525011780375912
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8067072612592000519}
-  - component: {fileID: 2416297299060040235}
+  - component: {fileID: 390306973}
   m_Layer: 0
   m_Name: base_stones
   m_TagString: Untagged
@@ -297,7 +311,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2416297299060040235
+--- !u!114 &390306973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,7 +320,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7947470707193138808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284fe5924c5c5454d8db7349eb20bc52, type: 3}
+  m_Script: {fileID: 11500000, guid: e576b54fe02331c42bf40a5f8a266f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 2503688569759659950}

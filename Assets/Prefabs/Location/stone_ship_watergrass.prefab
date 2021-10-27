@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2215355900193139639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284fe5924c5c5454d8db7349eb20bc52, type: 3}
+  m_Script: {fileID: 11500000, guid: e576b54fe02331c42bf40a5f8a266f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 5558449240860974649}
@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 8488926691285987245}
   - component: {fileID: 4783212358612934664}
   - component: {fileID: 7315417022105457858}
+  - component: {fileID: 8296876476350125068}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -573,3 +574,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8296876476350125068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9116808975887545623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.0232525, y: 1, z: 21.977291}
+  m_Center: {x: 0, y: -1.5, z: 0.0000019073486}

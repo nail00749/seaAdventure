@@ -10,6 +10,11 @@ public class CreateLvL : MonoBehaviour
 
     private List<Module> SpawnedModules; 
 
+    public List<Module> GetSpawnedModules
+    {
+        get { return SpawnedModules; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +35,17 @@ public class CreateLvL : MonoBehaviour
     {
             var newModule = Instantiate
                 (modules[Random.Range(0, modules.Length - 1)]);
+        #region Первый способ генерации уровня
         //newModule.transform.position =
         //SpawnedModules[SpawnedModules.Count - 1].end.position - newModule.start.localPosition;
+        #endregion
+        #region Второй способ генерации уровня
         var posX = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.x;
         var posY = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.y;
         var posZ = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.z;
-        newModule.transform.position = new Vector3(posX, posY, posZ - (float)21.7);
+        #endregion
+        newModule.transform.position = new Vector3(posX, posY, posZ - 21f);
           SpawnedModules.Add(newModule);
+        newModule.module = newModule.transform.gameObject;
     }
 }
