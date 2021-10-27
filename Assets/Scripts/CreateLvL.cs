@@ -20,7 +20,7 @@ public class CreateLvL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SpawnedModules.Count < 20)
+        if (SpawnedModules.Count < 40)
         {
             CreateModule();
         }
@@ -30,8 +30,12 @@ public class CreateLvL : MonoBehaviour
     {
             var newModule = Instantiate
                 (modules[Random.Range(0, modules.Length - 1)]);
-        newModule.transform.position =
-          SpawnedModules[SpawnedModules.Count - 1].end.position - newModule.start.localPosition;
-            SpawnedModules.Add(newModule);
+        //newModule.transform.position =
+        //SpawnedModules[SpawnedModules.Count - 1].end.position - newModule.start.localPosition;
+        var posX = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.x;
+        var posY = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.y;
+        var posZ = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.z;
+        newModule.transform.position = new Vector3(posX, posY, posZ - (float)21.7);
+          SpawnedModules.Add(newModule);
     }
 }
