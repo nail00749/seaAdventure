@@ -7,13 +7,7 @@ public class CreateLvL : MonoBehaviour
 
     public Module[] modules;
     public Module startModule;
-
     private List<Module> SpawnedModules; 
-
-    public List<Module> GetSpawnedModules
-    {
-        get { return SpawnedModules; }
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +25,9 @@ public class CreateLvL : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Метод создает локацию из префабов
+    /// </summary>
     private void CreateModule()
     {
             var newModule = Instantiate
@@ -44,6 +41,8 @@ public class CreateLvL : MonoBehaviour
         var posY = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.y;
         var posZ = SpawnedModules[SpawnedModules.Count - 1].module.transform.position.z;
         #endregion
+        //Debug.Log(newModule.GetComponent<BoxCollider>().size);
+        //Debug.Log(newModule.transform.GetChild(0).GetComponent<BoxCollider>().size);
         newModule.transform.position = new Vector3(posX, posY, posZ - 21f);
           SpawnedModules.Add(newModule);
         //newModule.module = newModule.transform.gameObject;
