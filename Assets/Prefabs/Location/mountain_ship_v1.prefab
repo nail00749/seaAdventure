@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 2345842446694116857}
   - component: {fileID: 1666825351725277788}
   - component: {fileID: 3514276220577748630}
+  - component: {fileID: 7009120980988696933}
   m_Layer: 0
   m_Name: full_mountain
   m_TagString: Untagged
@@ -129,6 +130,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7009120980988696933
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3154151321478379331}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6, y: 8.7, z: 22}
+  m_Center: {x: 0, y: 1.7000003, z: -0.1}
 --- !u!1 &4703639592128296235
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +250,7 @@ GameObject:
   - component: {fileID: 5225431923387577293}
   - component: {fileID: 9163608302738717800}
   - component: {fileID: 6399433078697052322}
+  - component: {fileID: 1767705339406952256}
   m_Layer: 0
   m_Name: ship_v1
   m_TagString: Untagged
@@ -307,6 +322,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1767705339406952256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4886306684968954231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.8, y: 9.1, z: 8.4}
+  m_Center: {x: 0, y: 0, z: -0.6}
 --- !u!1 &6047572318876143974
 GameObject:
   m_ObjectHideFlags: 0
