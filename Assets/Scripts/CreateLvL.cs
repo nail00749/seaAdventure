@@ -46,6 +46,6 @@ public class CreateLvL : MonoBehaviour
         #endregion
         newModule.transform.position = new Vector3(posX, posY, posZ - 21f);
           SpawnedModules.Add(newModule);
-        newModule.module = newModule.transform.gameObject;
+        //newModule.module = newModule.transform.gameObject;
     }
 }

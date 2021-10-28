@@ -37,9 +37,9 @@ public class HeroCreation : MonoBehaviour
         hero = Instantiate(heroes[i]);
         hero.transform.position = spawnBlock.position;
         hero.objectHero = hero.transform.gameObject;
-        hero.objectHero.AddComponent<HeroMove>();
         hero.objectHero.AddComponent<Rigidbody>();
         hero.objectHero.AddComponent<BoxCollider>();
+        hero.objectHero.AddComponent<HeroMove>();
     }
 
     public void ChangeHero(int index)
@@ -48,8 +48,9 @@ public class HeroCreation : MonoBehaviour
         Destroy(hero.objectHero);
         hero = Instantiate(heroes[index]);
         hero.transform.position = pos;
-        hero.objectHero.AddComponent<HeroMove>();
         hero.objectHero.AddComponent<Rigidbody>();
+        hero.objectHero.AddComponent<BoxCollider>();
+        hero.objectHero.AddComponent<HeroMove>();
     }
 
 }

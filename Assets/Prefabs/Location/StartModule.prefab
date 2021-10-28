@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4456710823156582159}
   - component: {fileID: 1890840765105697733}
   - component: {fileID: 8895814545099543928}
+  - component: {fileID: 385786585}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -100,7 +101,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 13.0232525, y: 1, z: 21.977291}
-  m_Center: {x: 0, y: -1.5, z: 0.0000019073486}
+  m_Center: {x: 0, y: -1, z: 0.0000019073486}
+--- !u!114 &385786585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89335149373444624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305165922512409193
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +170,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8273467735676117228}
-  - component: {fileID: 1648305902}
   m_Layer: 0
   m_Name: SpawnBlock
   m_TagString: Untagged
@@ -179,26 +191,6 @@ Transform:
   m_Father: {fileID: 753985102877034666}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1648305902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4011225401431093647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f459b5264cfcda344ac9a4763f0bff60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBlock: {fileID: 8273467735676117228}
-  heroes:
-  - {fileID: 4394114855812996609, guid: 2a9102612966e704b93a74c5a7e45c9a, type: 3}
-  - {fileID: 7862545191438577267, guid: b0c46eb0419aaa1498007a0a1e5757c6, type: 3}
-  - {fileID: 3063718432763291673, guid: 958c3b5dd4355c9488b68064541dfb91, type: 3}
-  - {fileID: 6843139192849147961, guid: 61729d693c034c443866178427269f0b, type: 3}
-  hero: {fileID: 0}
-  i: 0
 --- !u!1 &5604691825552005664
 GameObject:
   m_ObjectHideFlags: 0
