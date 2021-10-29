@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    public GameObject objectHero;
-
+    
     // Start is called before the first frame update
     void Start()
     {

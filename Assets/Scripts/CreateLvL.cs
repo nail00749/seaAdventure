@@ -38,22 +38,11 @@ public class CreateLvL : MonoBehaviour
         var newModule = Instantiate
             (modules[Random.Range(0, modules.Length - 1)]);
         
-        var colliderOfModule = SpawnedModules[SpawnedModules.Count - 1]
-            .transform.Find("base")?
-            .GetComponent<BoxCollider>();
-        if (colliderOfModule == null)
-            colliderOfModule = SpawnedModules[SpawnedModules.Count - 1]
-                .transform.Find("stone")
-                .Find("hole_in_floor")
-                .GetComponent<BoxCollider>();
-
-        var posX = colliderOfModule.transform.position.x;
-        var posY = colliderOfModule.transform.position.y;
-        var posZ = colliderOfModule.transform.position.z - colliderOfModule.size.z;
+        var colliderOfModule = SpawnedModules[SpawnedModules.Count - 1].GetComponent<BoxCollider>();
 
         var pos = colliderOfModule.transform.position;
 
-        newModule.transform.position = new Vector3(posX, posY, posZ);
+        newModule.transform.position = new Vector3(pos.x, pos.y, pos.z - colliderOfModule.size.z);
         SpawnedModules.Add(newModule);
         if (SpawnedModules.Count > 10)
         {

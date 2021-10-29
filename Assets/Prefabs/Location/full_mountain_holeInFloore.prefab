@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 661290756232102665}
   - component: {fileID: 4504369170292001964}
   - component: {fileID: 1830234603519555686}
-  - component: {fileID: 785960871226774068}
-  - component: {fileID: 6641156955491169400}
   m_Layer: 0
   m_Name: hole_in_floor
   m_TagString: Untagged
@@ -84,31 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &785960871226774068
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173020098679183795}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 12.713759, y: 2.4053023, z: 21.977282}
-  m_Center: {x: 0, y: 0.00000011920929, z: 0}
---- !u!114 &6641156955491169400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173020098679183795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4259212859796883762
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +188,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1310141710117065447}
   - component: {fileID: 701635252}
+  - component: {fileID: 8059012381429730123}
+  - component: {fileID: 8591391329742233196}
   m_Layer: 0
   m_Name: full_mountain_holeInFloore
   m_TagString: Untagged
@@ -252,6 +227,31 @@ MonoBehaviour:
   start: {fileID: 3769646678903152818}
   end: {fileID: 108928974611417538}
   module: {fileID: 4741538221082869016}
+--- !u!65 &8059012381429730123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741538221082869016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13, y: 1, z: 21.5}
+  m_Center: {x: 0, y: -1, z: -0.15}
+--- !u!114 &8591391329742233196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741538221082869016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4811315803361864735
 GameObject:
   m_ObjectHideFlags: 0

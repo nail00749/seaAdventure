@@ -15,23 +15,23 @@ public class CameraManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Метод присваиват позицию героя полю PositionHero
-    /// Срабатывает после события перемещения героя
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ PositionHero
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     /// </summary>
-    /// <param name="h"></param>
-    private void HeroManager_IsMoving(Hero h)
+    /// <param name="hero"></param>
+    private void HeroManager_IsMoving(Hero hero)
     {
-        PositionHero = h.transform.position;
+        PositionHero = hero.transform.position;
     }
 
     /// <summary>
-    /// Метод высчитывает расстояние от камеры до героя
-    /// Срабатывает после события созщдания персонажа
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
-    /// <param name="h"></param>
-    private void HeroManager_Created(Hero h)
+    /// <param name="hero"></param>
+    private void HeroManager_Created(Hero hero)
     {
-        PositionHero = h.transform.position;
+        PositionHero = hero.transform.position;
         Offset = transform.position - PositionHero;
     }
 

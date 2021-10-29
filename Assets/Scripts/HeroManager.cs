@@ -5,22 +5,22 @@ using UnityEngine;
 
 
 /// <summary>
-/// Класс менеджер героя
-/// Обрабатывает создание, смену, движение персонажа
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+/// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 /// </summary>
 public class HeroManager : MonoBehaviour
 {
     public delegate void CreateHeroDelegate(Hero h);
     /// <summary>
-    /// Событие создания героя
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     /// </summary>
 
 
     /// <summary>
-    /// Событие перемещения героя
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     /// </summary>
 
-    #region Поля
+    #region пїЅпїЅпїЅпїЅ
     public static event CreateHeroDelegate Created;
     public static event CreateHeroDelegate heroMoving;
     public Transform spawnBlock;
@@ -53,7 +53,7 @@ public class HeroManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Смена персонажа по нажатию кнопки Tab
+        //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Tab
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ChangeHero();
@@ -63,7 +63,7 @@ public class HeroManager : MonoBehaviour
                 i = 0;
             }
         }
-        //Дижение персонажа
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (isMoving)
         {
             Move();
@@ -71,7 +71,7 @@ public class HeroManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Метод создающий героя
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     public void CreateHero(Vector3 position = new Vector3())
     {
@@ -80,27 +80,27 @@ public class HeroManager : MonoBehaviour
             hero.transform.position = position;
         else
             hero.transform.position = spawnBlock.position;
-        //hero.objectHero = hero.transform.gameObject;
-        hero.objectHero.AddComponent<Rigidbody>();
-        hero.objectHero.AddComponent<BoxCollider>();
-        hero.objectHero.AddComponent<CollisionManager>();
+        hero.gameObject.AddComponent<Rigidbody>();
+        hero.gameObject.AddComponent<BoxCollider>();
+        hero.gameObject.AddComponent<CollisionManager>();
+
         Created?.Invoke(hero);
     }
     /// <summary>
-    /// Метод меняющий героев
-    /// Удаляет старого и создает нового
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     public void ChangeHero()
     {
         var pos = hero.transform.position;
-        Destroy(hero.objectHero);
+        Destroy(hero.gameObject);
         CreateHero(pos);
     }
 
 
     /// <summary>
-    /// Метод обработки координат после 
-    /// События нажатия на коллайдер пола локации
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     /// <param name="args"></param>
     private void Click_IsClicked(Vector3 args)
@@ -112,8 +112,8 @@ public class HeroManager : MonoBehaviour
         {
             TargetPosition = hit.point;
         }
-        //Поправить
-        //Поварачивает не той стороной
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         hero.transform.LookAt(TargetPosition);
 
         isMoving = true;
@@ -121,7 +121,7 @@ public class HeroManager : MonoBehaviour
 
 
     /// <summary>
-    /// Метод движения героев
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     private void Move()
     {

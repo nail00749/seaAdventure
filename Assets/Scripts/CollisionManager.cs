@@ -13,34 +13,29 @@ public class CollisionManager : MonoBehaviour
         var enemyObject = collision.collider;
         if (!enemyObject.gameObject.GetComponent<Enemy>())
             return;
-
-        
-
-        if (CheckingTheHero(enemyObject.gameObject))
+        if (BarrierCheck(enemyObject.gameObject.GetComponent<Enemy>().passingObject))
         {
             enemyObject.isTrigger = true;
         }
         else
         {
-            Debug.Log("Смените персонажа");
+            Debug.Log("РЎРјРµРЅРёС‚Рµ РїРµСЂСЃРѕРЅР°Р¶Р°");
             CollisionEnter?.Invoke(enemyObject.gameObject);
         }
     }
 
-    private bool CheckingTheHero(GameObject enemy)
+    private bool BarrierCheck(List<GameObject> enemy)
     {
-        switch (enemy.name)
+        if(name.Contains("(Clone)"))
+            name = name.Remove(name.Length-7);
+        for (var i = 0; i < enemy.Count; i++)
         {
-            case "ship_v1":
-                if (transform.name == "fish_yozh" || transform.name == "fish_yozh(Clone)")
-                    return true;
-                break;
-            case "ship_v2":
-                if (transform.name == "fish_yozh" || transform.name == "fish_yozh(Clone)")
-                    return true;
-                break;
-        }
 
+            if(enemy[i].name == name)
+            {
+                return true;
+            }
+        }
         return false;
     }
 

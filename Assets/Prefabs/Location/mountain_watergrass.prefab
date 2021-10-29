@@ -188,6 +188,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7272116795395224066}
   - component: {fileID: 1600795741}
+  - component: {fileID: 7979574717847563824}
+  - component: {fileID: 1587157737114502754}
   m_Layer: 0
   m_Name: mountain_watergrass
   m_TagString: Untagged
@@ -225,6 +227,31 @@ MonoBehaviour:
   start: {fileID: 8637805875755443467}
   end: {fileID: 3040824916084269005}
   module: {fileID: 1762024571201714571}
+--- !u!65 &7979574717847563824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762024571201714571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13, y: 1, z: 21.5}
+  m_Center: {x: 0, y: -1, z: 0}
+--- !u!114 &1587157737114502754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762024571201714571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6854023503599271229
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,8 +263,6 @@ GameObject:
   - component: {fileID: 6076959687176497031}
   - component: {fileID: 7204186235295311906}
   - component: {fileID: 4908534915409763560}
-  - component: {fileID: 3472529655464786130}
-  - component: {fileID: 529407197435419818}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -314,31 +339,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3472529655464786130
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6854023503599271229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13.0232525, y: 1, z: 21.977291}
-  m_Center: {x: 0, y: -1.5, z: 0.0000019073486}
---- !u!114 &529407197435419818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6854023503599271229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6946385691238809752
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    public List<GameObject> passingObject;
     // Start is called before the first frame update
     void Start()
     {
