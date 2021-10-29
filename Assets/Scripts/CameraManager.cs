@@ -11,7 +11,7 @@ public class CameraManager : MonoBehaviour
     void Start()
     {
         HeroManager.Created += HeroManager_Created;
-        HeroManager.IsMoving += HeroManager_IsMoving;
+        HeroManager.heroMoving += HeroManager_IsMoving;
     }
 
     /// <summary>

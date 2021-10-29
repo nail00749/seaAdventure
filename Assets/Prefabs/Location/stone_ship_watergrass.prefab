@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 5538577689351016920}
   - component: {fileID: 7725938740312089874}
   - component: {fileID: 7220755007101710667}
+  - component: {fileID: 1891912231}
   m_Layer: 0
   m_Name: ship_v2
   m_TagString: Untagged
@@ -417,6 +418,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16.696648, y: 9.111169, z: 8.017341}
   m_Center: {x: -0.0000038146973, y: 0, z: 0}
+--- !u!114 &1891912231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8086477192144651463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7318d237c3ed50346aebe923fca4299e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8969555934937783087
 GameObject:
   m_ObjectHideFlags: 0

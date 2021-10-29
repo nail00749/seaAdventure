@@ -4,27 +4,44 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
-    private GameObject barrier;
-    private Hero hero;
-    private Collider heroCollider;
-    private Collider barrierCollider;
+    public delegate void CollisionDelegate(GameObject gameObject);
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        HeroManager.Created += HeroManager_Created;
-        barrierCollider = barrier.GetComponent<BoxCollider>();
-    }
+    public static event CollisionDelegate CollisionEnter;
 
-    private void HeroManager_Created(Hero h)
+    void OnCollisionEnter(Collision collision)
     {
-        hero = h;
-        heroCollider = hero.GetComponent<BoxCollider>();
-    }
+        var enemyObject = collision.collider;
+        if (!enemyObject.gameObject.GetComponent<Enemy>())
+            return;
 
-    // Update is called once per frame
-    void Update()
-    {
         
+
+        if (CheckingTheHero(enemyObject.gameObject))
+        {
+            enemyObject.isTrigger = true;
+        }
+        else
+        {
+            Debug.Log("Смените персонажа");
+            CollisionEnter?.Invoke(enemyObject.gameObject);
+        }
     }
+
+    private bool CheckingTheHero(GameObject enemy)
+    {
+        switch (enemy.name)
+        {
+            case "ship_v1":
+                if (transform.name == "fish_yozh" || transform.name == "fish_yozh(Clone)")
+                    return true;
+                break;
+            case "ship_v2":
+                if (transform.name == "fish_yozh" || transform.name == "fish_yozh(Clone)")
+                    return true;
+                break;
+        }
+
+        return false;
+    }
+
 }

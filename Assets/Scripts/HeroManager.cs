@@ -22,7 +22,7 @@ public class HeroManager : MonoBehaviour
 
     #region Поля
     public static event CreateHeroDelegate Created;
-    public static event CreateHeroDelegate IsMoving;
+    public static event CreateHeroDelegate heroMoving;
     public Transform spawnBlock;
     public Hero[] heroes;
     private Hero hero;
@@ -42,6 +42,12 @@ public class HeroManager : MonoBehaviour
         isMoving = false;
         speed = 5f;
         ClickHandler.IsClicked += Click_IsClicked;
+        CollisionManager.CollisionEnter += CollisionManager_CollisionEnter;
+    }
+
+    private void CollisionManager_CollisionEnter(GameObject gameObject)
+    {
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -70,14 +76,14 @@ public class HeroManager : MonoBehaviour
     public void CreateHero(Vector3 position = new Vector3())
     {
         hero = Instantiate(heroes[i]);
-        Debug.Log(position);
         if (position != new Vector3(0,0,0))
             hero.transform.position = position;
         else
             hero.transform.position = spawnBlock.position;
-        hero.objectHero = hero.transform.gameObject;
+        //hero.objectHero = hero.transform.gameObject;
         hero.objectHero.AddComponent<Rigidbody>();
         hero.objectHero.AddComponent<BoxCollider>();
+        hero.objectHero.AddComponent<CollisionManager>();
         Created?.Invoke(hero);
     }
     /// <summary>
@@ -121,7 +127,7 @@ public class HeroManager : MonoBehaviour
     {
         hero.transform.position = Vector3.MoveTowards
             (hero.transform.position, TargetPosition, speed * Time.deltaTime);
-        IsMoving?.Invoke(hero);
+        heroMoving?.Invoke(hero);
 
         if ((int)(hero.transform.position.x) == (int)(TargetPosition.x) 
             && (int)(hero.transform.position.z) == (int)(TargetPosition.z))
