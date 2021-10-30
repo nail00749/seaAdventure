@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
-    public delegate void CollisionDelegate(GameObject gameObject);
+    public delegate void CollisionDelegate(GameObject gameObject);//+
 
-    public static event CollisionDelegate CollisionEnter;
+    public static event CollisionDelegate CollisionEnter;//+
 
     void OnCollisionEnter(Collision collision)
     {
@@ -20,7 +20,7 @@ public class CollisionManager : MonoBehaviour
         else
         {
             Debug.Log("Смените персонажа");
-            CollisionEnter?.Invoke(enemyObject.gameObject);
+            CollisionEnter?.Invoke(enemyObject.gameObject);//+
         }
     }
 
