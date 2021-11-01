@@ -60,7 +60,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 21.5}
+  m_Size: {x: 13, y: 1, z: 22}
   m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &56405110581181387
 MonoBehaviour:
@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 8242282764917211245}
   - component: {fileID: 5029855665459826632}
   - component: {fileID: 7073277452350978818}
+  - component: {fileID: 4402176726214883355}
   m_Layer: 0
   m_Name: stones
   m_TagString: Untagged
@@ -643,3 +644,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4402176726214883355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730694267343166167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53adc6ebc61576f4c8c38a986aca93af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

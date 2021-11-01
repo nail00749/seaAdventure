@@ -147,7 +147,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 21.5}
+  m_Size: {x: 13, y: 1, z: 22}
   m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &7926546275128520675
 MonoBehaviour:
@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 8305021357152283759}
   - component: {fileID: 6099469998974621861}
   - component: {fileID: 7953175200416791339}
+  - component: {fileID: 709175343683299228}
   m_Layer: 0
   m_Name: full_mountain
   m_TagString: Untagged
@@ -318,6 +319,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 8.8, z: 21.97728}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &709175343683299228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739089876681718128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53adc6ebc61576f4c8c38a986aca93af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7140253003960055983
 GameObject:
   m_ObjectHideFlags: 0
