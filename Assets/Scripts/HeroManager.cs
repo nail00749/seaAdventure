@@ -20,6 +20,7 @@ public class HeroManager : MonoBehaviour
     private Vector3 TargetPosition;
     private Vector3 PrevHeroPosition;
     private float Speed;
+    private float Progress;
     #endregion
 
     // Start is called before the first frame update
@@ -60,7 +61,6 @@ public class HeroManager : MonoBehaviour
         {
             
             HeroTurn();
-
         }
 
         if (IsMoving)
@@ -118,9 +118,6 @@ public class HeroManager : MonoBehaviour
         
         float angleHero = (float)Math.Round(hero.transform.rotation.y, 3);
         float anglePoint = (float)Math.Round(rotation.y, 3);
-        
-        anglePoint = anglePoint > 0 ? anglePoint : -anglePoint;
-        angleHero = angleHero > 0 ? angleHero : -angleHero;
 
         if (anglePoint == angleHero)
         {
@@ -128,7 +125,6 @@ public class HeroManager : MonoBehaviour
             Turns = false;
         }
     }
-
 
     private void Move()
     {

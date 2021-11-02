@@ -32,7 +32,7 @@ public class CollisionManager : MonoBehaviour
         }
         else if (enemyObject.gameObject.GetComponent<Border>())
         {
-            CollisionEnter?.Invoke(enemyObject.gameObject);
+            //CollisionEnter?.Invoke(enemyObject.gameObject);
         }
 
     }

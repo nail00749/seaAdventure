@@ -42,7 +42,7 @@ public class CreateLvL : MonoBehaviour
 
         var pos = colliderOfModule.transform.position;
 
-        newModule.transform.position = new Vector3(pos.x, pos.y, pos.z - colliderOfModule.size.z + 0.3f);
+        newModule.transform.position = new Vector3(pos.x, pos.y, pos.z - colliderOfModule.size.z);
         SpawnedModules.Add(newModule);
         if (SpawnedModules.Count > 10)
         {
