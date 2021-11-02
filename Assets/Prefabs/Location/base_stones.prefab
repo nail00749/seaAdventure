@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 2745250337318710828}
   m_Layer: 0
   m_Name: base_stones
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

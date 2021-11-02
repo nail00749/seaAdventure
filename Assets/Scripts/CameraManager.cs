@@ -7,17 +7,25 @@ public class CameraManager : MonoBehaviour
 {
     public Animator Shake;
     private Vector3 Offset;
-    private Vector3 PositionHero;
+    public GameObject HeroGroup;
     private List<GameObject> enemyObjects;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyObjects = new List<GameObject>();
-        HeroManager.Created += HeroManager_Created;
-        HeroManager.heroMoving += HeroManager_IsMoving;
         CollisionManager.CollisionEnter += ShakeCamera;
+        Offset = transform.position - HeroGroup.transform.position;
     }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = HeroGroup.transform.position + Offset;
+    }
+
+
 
     private void ShakeCamera(GameObject gameObject)
     {
@@ -28,39 +36,4 @@ public class CameraManager : MonoBehaviour
         }
         
     }
-
-    private void HeroManager_IsMoving(Hero hero)
-    {
-        PositionHero = hero.transform.position;
-    }
-
-    /// <summary>
-    /// ����� ����������� ���������� �� ������ �� �����
-    /// ����������� ����� ������� ��������� ���������
-    /// </summary>
-    /// <param name="hero"></param>
-    private void HeroManager_Created(Hero hero)
-    {
-        PositionHero = hero.transform.position;
-        Offset = transform.position - PositionHero;
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = PositionHero + Offset;
-        for (var i = 0; i < enemyObjects.Count - 1; i++)
-        {
-            var enemy = enemyObjects[i];
-            if(PositionHero.z < enemy.transform.position.z + 20 || 
-               PositionHero.z > enemy.transform.position.z - 20)
-            {
-                enemyObjects.RemoveAt(i);
-                Debug.Log("Remove");
-            }
-        }
-    }
-
 }
