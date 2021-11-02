@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7550054104619641416}
   - component: {fileID: 847729028}
-  - component: {fileID: 3944124077227773027}
   - component: {fileID: 56405110581181387}
+  - component: {fileID: 1493349698977783518}
   m_Layer: 0
   m_Name: mountain_ship_v1
   m_TagString: Untagged
@@ -49,19 +49,6 @@ MonoBehaviour:
   start: {fileID: 5032610565761683438}
   end: {fileID: 4154028890884548712}
   module: {fileID: 1826784322309553049}
---- !u!65 &3944124077227773027
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826784322309553049}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 22}
-  m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &56405110581181387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +61,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1493349698977783518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826784322309553049}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.901823, y: 1, z: 19.33525}
+  m_Center: {x: -2.785833, y: -1, z: -0.5111227}
 --- !u!1 &3154151321478379331
 GameObject:
   m_ObjectHideFlags: 0

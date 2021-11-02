@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 50433177, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
   m_PrefabInstance: {fileID: 702109836}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170804277}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e576b54fe02331c42bf40a5f8a266f6f, type: 3}
@@ -440,10 +440,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartModule
       objectReference: {fileID: 0}
-    - target: {fileID: 305165922512409193, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
-      propertyPath: m_TagString
-      value: ground
-      objectReference: {fileID: 0}
     - target: {fileID: 5674394143756253978, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -488,12 +484,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7953175200416791339, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 23113468643413923, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -876,24 +867,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1170804277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 305165922512409193, guid: 4b4e440a2e93a06488bef89177822d3b, type: 3}
-  m_PrefabInstance: {fileID: 702109836}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1170804279
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170804277}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.9018226, y: 1, z: 19.335253}
-  m_Center: {x: -2.7858331, y: -1, z: -0.5111227}
 --- !u!1 &1219689577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,10 +1278,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: full_mountain_holeInFloore
       objectReference: {fileID: 0}
-    - target: {fileID: 8059012381429730123, guid: 304e9eb5bcaafc54b99ee557a971bab0, type: 3}
-      propertyPath: m_Center.z
-      value: -0.14
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304e9eb5bcaafc54b99ee557a971bab0, type: 3}
 --- !u!1001 &2983336514668066285
@@ -1418,10 +1387,6 @@ PrefabInstance:
     - target: {fileID: 506590142426460571, guid: 5dc38299f58677e4aa52082f5250317b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862209720029411453, guid: 5dc38299f58677e4aa52082f5250317b, type: 3}
-      propertyPath: m_Center.z
-      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 7719699209854025915, guid: 5dc38299f58677e4aa52082f5250317b, type: 3}
       propertyPath: m_Name

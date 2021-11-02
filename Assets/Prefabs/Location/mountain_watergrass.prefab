@@ -201,8 +201,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7272116795395224066}
   - component: {fileID: 1600795741}
-  - component: {fileID: 7979574717847563824}
   - component: {fileID: 1587157737114502754}
+  - component: {fileID: 1337395697486040655}
   m_Layer: 0
   m_Name: mountain_watergrass
   m_TagString: Untagged
@@ -240,19 +240,6 @@ MonoBehaviour:
   start: {fileID: 8637805875755443467}
   end: {fileID: 3040824916084269005}
   module: {fileID: 1762024571201714571}
---- !u!65 &7979574717847563824
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762024571201714571}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 22}
-  m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &1587157737114502754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +252,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f61166bdb8daa1459a1d996994b7b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1337395697486040655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762024571201714571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.901823, y: 1, z: 19.33525}
+  m_Center: {x: -2.785833, y: -1, z: -0.5111227}
 --- !u!1 &6854023503599271229
 GameObject:
   m_ObjectHideFlags: 0
