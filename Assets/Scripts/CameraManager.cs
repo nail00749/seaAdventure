@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    
     public Animator Shake;
     private Vector3 Offset;
     public GameObject HeroGroup;
@@ -14,7 +15,6 @@ public class CameraManager : MonoBehaviour
     void Start()
     {
         enemyObjects = new List<GameObject>();
-        CollisionManager.CollisionEnter += ShakeCamera;
         Offset = transform.position - HeroGroup.transform.position;
     }
 
@@ -24,16 +24,5 @@ public class CameraManager : MonoBehaviour
     {
         transform.position = HeroGroup.transform.position + Offset;
     }
-
-
-
-    private void ShakeCamera(GameObject gameObject)
-    {
-        if(!enemyObjects.Contains(gameObject))
-        {
-            enemyObjects.Add(gameObject);
-            Shake.SetTrigger("Shake");
-        }
-        
-    }
+    
 }

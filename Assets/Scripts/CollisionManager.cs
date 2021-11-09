@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
-    public delegate void CollisionDelegate(GameObject gameObject);
+   /* public delegate void CollisionDelegate(GameObject gameObject);
 
     public static event CollisionDelegate CollisionEnter;
     private List<Collider> enemyObjects;
@@ -64,5 +64,5 @@ public class CollisionManager : MonoBehaviour
             }
         }
     }
-
+    */
 }

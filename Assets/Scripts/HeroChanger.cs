@@ -7,6 +7,11 @@ public class HeroChanger : MonoBehaviour
     private int _currentHeroIndex;
     private GameObject _currentHero;
     
+    public int GetActiveHeroIndex
+    {
+        get { return _currentHeroIndex; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

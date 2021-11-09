@@ -9,25 +9,19 @@ public class CreateLvL : MonoBehaviour
     public Module[] modules;
     public Module startModule;
     private List<Module> SpawnedModules;
-    private Vector3 PositionHero;
+    public GameObject HeroGroup;
 
     // Start is called before the first frame update
     void Start()
     {
         SpawnedModules = new List<Module>();
         SpawnedModules.Add(startModule);
-        HeroManager.heroMoving += HeroManager_IsMoving;
-    }
-
-    private void HeroManager_IsMoving(Hero h)
-    {
-        PositionHero = h.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PositionHero.z < SpawnedModules[SpawnedModules.Count - 1].transform.position.z + 70)
+        if (HeroGroup.transform.position.z < SpawnedModules[SpawnedModules.Count - 1].transform.position.z + 70)
         {
             CreateModule();
         }

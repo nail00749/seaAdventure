@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 42162269820678356}
   - component: {fileID: 2842120002424079390}
   - component: {fileID: 3114274337936608350}
-  - component: {fileID: 6213092543369303386}
+  - component: {fileID: 3237631135495437143}
   m_Layer: 0
   m_Name: ship_v2
   m_TagString: obstacle
@@ -484,9 +484,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.2856, y: 9.111168, z: 5.445475}
-  m_Center: {x: 0.20554087, y: -0.0000000018243552, z: 0.75278246}
---- !u!114 &6213092543369303386
+  m_Size: {x: 18.253527, y: 8.012223, z: 5.445475}
+  m_Center: {x: -0.7784157, y: -0.5494727, z: 0.7527761}
+--- !u!114 &3237631135495437143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -498,8 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7318d237c3ed50346aebe923fca4299e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passingObject:
-  - {fileID: 2320192925163111069, guid: b0c46eb0419aaa1498007a0a1e5757c6, type: 3}
+  passingObject: saw
 --- !u!1 &5651227848009908264
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HeroManager : MonoBehaviour
 {
-    public delegate void CreateHeroDelegate(Hero h);
+   /* public delegate void CreateHeroDelegate(Hero h);
 
     #region поля
     public static event CreateHeroDelegate Created;
@@ -139,5 +139,5 @@ public class HeroManager : MonoBehaviour
         }
 
     }
-
+    */
 }

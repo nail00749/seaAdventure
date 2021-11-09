@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -758,7 +758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.19687569, y: 0.7765835, z: -0.29298186, w: 0.52184266}
-  m_LocalPosition: {x: -7.81, y: 13.09, z: 5.11}
+  m_LocalPosition: {x: -14.96, y: 19.84, z: 5.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e35ac73d603b042bada85976216e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shake: {fileID: 963194230}
+  Shake: {fileID: 0}
   HeroGroup: {fileID: 1396860479}
 --- !u!95 &963194230
 Animator:
@@ -843,6 +843,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroGroupMoveController: {fileID: 1396860480}
   textObstacle: {fileID: 210837915}
+  Heroes:
+  - {fileID: 1743077300}
+  - {fileID: 1804814711}
+  - {fileID: 1250670916}
+  - {fileID: 196686142}
+  - {fileID: 1644394801}
+  heroGroupHeroChanger: {fileID: 1396860484}
 --- !u!65 &967066505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -920,6 +927,7 @@ MonoBehaviour:
   - {fileID: 509010947560543060, guid: 8c55d8e3e3f165a48a2e6ea25ddc0541, type: 3}
   - {fileID: 8015977542953566198, guid: 86511e61062d37f4b9a3ad84770b4864, type: 3}
   startModule: {fileID: 50433177}
+  HeroGroup: {fileID: 1396860479}
 --- !u!1 &1396860479
 GameObject:
   m_ObjectHideFlags: 0
