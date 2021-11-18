@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class Module : MonoBehaviour
 {
-    public Transform start;
-    public Transform end;
-    public GameObject module;
 
 }

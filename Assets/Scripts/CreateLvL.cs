@@ -11,7 +11,6 @@ public class CreateLvL : MonoBehaviour
     private List<Module> SpawnedModules;
     public GameObject HeroGroup;
 
-    // Start is called before the first frame update
     void Start()
     {
         SpawnedModules = new List<Module>();
