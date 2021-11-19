@@ -95,6 +95,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c187153f4e0c804ba05e2aa83e0ac96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passableBarrier:
-  - {fileID: 0}
-  - {fileID: 0}
+  heroName: hedgehog
