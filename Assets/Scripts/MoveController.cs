@@ -50,7 +50,7 @@ public class MoveController : MonoBehaviour
         lookPos.y = 0;
         if (lookPos != Vector3.zero)
         {
-            var rotation = Quaternion.LookRotation(-lookPos);
+            var rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10f);
         }
 

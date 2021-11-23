@@ -11,13 +11,13 @@ public class UsingAbilities : MonoBehaviour
         var index = heroChanger.GetActiveHeroIndex;
         switch (index)
         {
-            case 0: HammerAbility(heroes[index]);
+            case 0: EelAbility(heroes[index]);
                 break;
-            case 1: SawAbility(heroes[index]);
+            case 1: HammerAbility(heroes[index]);
                 break;
             case 2: HedgehogAbility(heroes[index]);
                 break;
-            case 3: EelAbility(heroes[index]);
+            case 3: SawAbility(heroes[index]); 
                 break;
             case 4: TurtlesAbility(heroes[index]);
                 break;

@@ -20,7 +20,7 @@ public class CreateLvL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HeroGroup.transform.position.z < SpawnedModules[SpawnedModules.Count - 1].transform.position.z + 70)
+        if (HeroGroup.transform.position.z > SpawnedModules[SpawnedModules.Count - 1].transform.position.z - 60)
         {
             CreateModule();
         }
@@ -35,12 +35,13 @@ public class CreateLvL : MonoBehaviour
 
         var pos = colliderOfModule.transform.position;
 
-        newModule.transform.position = new Vector3(pos.x, pos.y, pos.z - colliderOfModule.size.z);
+        newModule.transform.position = new Vector3(pos.x, pos.y, pos.z + colliderOfModule.size.z);
         SpawnedModules.Add(newModule);
         if (SpawnedModules.Count > 10)
         {
             Destroy(SpawnedModules[0].gameObject);
             SpawnedModules.RemoveAt(0);
         }
+        
     }
 }
