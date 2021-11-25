@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    
+    [SerializeField]
+    private string heroName;    
+
+    public string GetHeroName
+    {
+        get {return heroName;}
+    }
 }

@@ -8,16 +8,17 @@ public class ObstacleChecker : MonoBehaviour
 {   
     public MoveController heroGroupMoveController;
     public Text textObstacle;
-    public List<GameObject> Heroes;
+    public List<Hero> Heroes;
     private Dictionary<string, GameObject> passingDict;
     public HeroChanger heroGroupHeroChanger;
     public Button UseAbilityButton;
     public Button ChangeHeroButton;
+    public Enemy enemyObject;
 
     void Start()
     {
-        passingDict = new Dictionary<string, GameObject>();
-        passingDict.Add("saw", Heroes[1].gameObject);
+        //passingDict = new Dictionary<string, GameObject>();
+        //passingDict.Add("saw", Heroes[1].gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,12 +28,22 @@ public class ObstacleChecker : MonoBehaviour
         {
             heroGroupMoveController._isMove = false;
 
+            enemyObject = other.GetComponent<Enemy>();
+
             var type = other.GetComponent<Enemy>().passingObject;
+            var currentHeroName = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].GetHeroName;
+            if (type == currentHeroName)
+                UseAbilityButton.gameObject.SetActive(true);
+            else
+                ChangeHeroButton.gameObject.SetActive(true);
+            /* 
             var currentHero = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].gameObject;
             if (passingDict[type] == currentHero)
                 UseAbilityButton.gameObject.SetActive(true);
             else
                 ChangeHeroButton.gameObject.SetActive(true);
+            */
+
         }
     }
 
