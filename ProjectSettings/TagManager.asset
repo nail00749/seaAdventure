@@ -8,6 +8,7 @@ TagManager:
   - obstacle
   - hole
   - dust
+  - road
   layers:
   - Default
   - TransparentFX
