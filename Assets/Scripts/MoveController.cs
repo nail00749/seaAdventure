@@ -7,10 +7,13 @@ public class MoveController : MonoBehaviour
     private Vector3 _mouseTarget;
     public bool _isMove;
     private Vector3 _lookPos;
+    
+    [SerializeField]
+    private UsingAbilities usingAbilities;
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !usingAbilities.Using)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

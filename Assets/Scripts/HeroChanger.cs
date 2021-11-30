@@ -11,6 +11,8 @@ public class HeroChanger : MonoBehaviour
     {
         get { return _currentHeroIndex; }
     }
+    [SerializeField]
+    private UsingAbilities usingAbilities;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class HeroChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !usingAbilities.Using)
         {
             //_currentHero = ChangeHero();
             ChangeHero();
