@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2491544999264301794}
   - component: {fileID: 1530209490497158471}
   - component: {fileID: 3663838986407987597}
-  - component: {fileID: 3495927578769531878}
   - component: {fileID: 2483168675421686500}
+  - component: {fileID: 3027773041194488378}
   m_Layer: 0
   m_Name: SM_Ship
   m_TagString: obstacle
@@ -86,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3495927578769531878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3015281263045830744}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 29.104752, y: 6.6545687, z: 9.932465}
-  m_Center: {x: -10.742153, y: 4.4684014, z: 8.683737}
 --- !u!114 &2483168675421686500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +99,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: saw
+--- !u!64 &3027773041194488378
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015281263045830744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1731436766712664049, guid: 39deee5da9543074ab78ca85632fd4b3, type: 3}

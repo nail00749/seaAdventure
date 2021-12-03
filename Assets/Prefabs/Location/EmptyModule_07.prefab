@@ -113,6 +113,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_07
       objectReference: {fileID: 0}
+    - target: {fileID: 3353382144275448877, guid: 201b40df43e74f342a1cdff19d917284, type: 3}
+      propertyPath: m_Size.x
+      value: 7.2541027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353382144275448877, guid: 201b40df43e74f342a1cdff19d917284, type: 3}
+      propertyPath: m_Center.x
+      value: -17.550976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 201b40df43e74f342a1cdff19d917284, type: 3}
 --- !u!4 &6835977836263419549 stripped

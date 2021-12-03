@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4316516740931801914}
   - component: {fileID: 1515339988076844467}
   - component: {fileID: 5110850833892783525}
-  - component: {fileID: 8039953115004537038}
+  - component: {fileID: 9210304342514087215}
   m_Layer: 0
   m_Name: SM_Split_02_small
   m_TagString: obstacle
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: hedgehog
---- !u!65 &8039953115004537038
-BoxCollider:
+--- !u!64 &9210304342514087215
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,9 +109,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 39.1167, y: 11.821418, z: 6.099434}
-  m_Center: {x: -10.631775, y: 4.9684434, z: 10.058229}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5306807095314194177, guid: 2c956260235362c4d9183de6017632c9, type: 3}
 --- !u!1 &7276945338436455987
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7276945338436455987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.05, y: 4.34, z: 10.87}
+  m_LocalPosition: {x: -10.27, y: 3.92, z: 10.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1073882494796122227}

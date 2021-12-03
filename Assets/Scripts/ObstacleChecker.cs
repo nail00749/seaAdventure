@@ -6,51 +6,90 @@ using UnityEngine.UI;
 
 public class ObstacleChecker : MonoBehaviour
 {   
-    public MoveController heroGroupMoveController;
-    public Text textObstacle;
-    public List<Hero> Heroes;
-    private Dictionary<string, GameObject> passingDict;
-    public HeroChanger heroGroupHeroChanger;
-    public Button UseAbilityButton;
-    public Button ChangeHeroButton;
-    public Enemy enemyObject;
+    [SerializeField]
+    private MoveController heroGroupMoveController;
+    [SerializeField]
+    private Text textObstacle;
+    [SerializeField]
+    private List<Hero> Heroes;
+    [SerializeField]
+    private HeroChanger heroGroupHeroChanger;
+    [SerializeField]
+    private Button UseAbilityButton;
+    [SerializeField]
+    private Button ChangeHeroButton;
+    [SerializeField]
+    private Button MoveOnButton;
+    private GameObject enemyObject;
+    private int prevHeroIndex;
+    private bool collide;
+
+    public bool GetCollide
+    {
+        get {return collide;}
+    }
+    public GameObject GetEnemyObject
+    {
+        get {return enemyObject;}
+    }
 
     void Start()
     {
-        //passingDict = new Dictionary<string, GameObject>();
-        //passingDict.Add("saw", Heroes[1].gameObject);
+        collide = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "obstacle")
         {
+            collide = true;
             heroGroupMoveController._isMove = false;
+            enemyObject = other.gameObject;
+            CheckHeroAndEnemy();
+        }
+    }
 
-            enemyObject = other.GetComponent<Enemy>();
+    private void CheckHeroAndEnemy()
+    {
+        var currentPassingObject = enemyObject.GetComponent<Enemy>().passingObject;
+        var currentHeroName = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].GetHeroName;
 
-            var type = other.GetComponent<Enemy>().passingObject;
-            var currentHeroName = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].GetHeroName;
-            if (type == currentHeroName)
-                UseAbilityButton.gameObject.SetActive(true);
-            else
-                ChangeHeroButton.gameObject.SetActive(true);
-            /* 
-            var currentHero = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].gameObject;
-            if (passingDict[type] == currentHero)
-                UseAbilityButton.gameObject.SetActive(true);
-            else
-                ChangeHeroButton.gameObject.SetActive(true);
-            */
-
+        if (currentPassingObject == currentHeroName)
+        {
+            collide = false;
+            UseAbilityButton.gameObject.SetActive(true);
+            MoveOnButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            prevHeroIndex = heroGroupHeroChanger.GetActiveHeroIndex;
+            ChangeHeroButton.gameObject.SetActive(true);
+            MoveOnButton.gameObject.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        textObstacle.text = "";
+        collide = false;
         UseAbilityButton.gameObject.SetActive(false);
         ChangeHeroButton.gameObject.SetActive(false);
+        MoveOnButton.gameObject.SetActive(false);
+    }
+
+    private void FixedUpdate() 
+    {
+        if(prevHeroIndex != heroGroupHeroChanger.GetActiveHeroIndex && collide)
+        {
+            ChangeHeroButton.gameObject.SetActive(false);
+            CheckHeroAndEnemy();
+        }
+    }
+
+    public void MoveOn()
+    {
+        collide = false;
+        UseAbilityButton.gameObject.SetActive(false);
+        ChangeHeroButton.gameObject.SetActive(false);
+        MoveOnButton.gameObject.SetActive(false);
     }
 }

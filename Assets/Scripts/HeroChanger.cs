@@ -31,7 +31,6 @@ public class HeroChanger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab) && !usingAbilities.Using)
         {
-            //_currentHero = ChangeHero();
             ChangeHero();
         }
     }
@@ -46,7 +45,6 @@ public class HeroChanger : MonoBehaviour
             hero.SetActive(false);
 
         heroes[_currentHeroIndex].SetActive(true);
-        //return heroes[_currentHeroIndex];
         _currentHero = heroes[_currentHeroIndex];
     }
 }

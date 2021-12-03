@@ -65,6 +65,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7699366431336208756}
     m_Modifications:
+    - target: {fileID: 6486704799909777882, guid: 8ff7c24dc3d9ae24d9c6aed89bd05e4f, type: 3}
+      propertyPath: m_Size.x
+      value: 6.8554363
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486704799909777882, guid: 8ff7c24dc3d9ae24d9c6aed89bd05e4f, type: 3}
+      propertyPath: m_Center.x
+      value: -17.750309
+      objectReference: {fileID: 0}
     - target: {fileID: 7338850874311213287, guid: 8ff7c24dc3d9ae24d9c6aed89bd05e4f, type: 3}
       propertyPath: m_Name
       value: SM_Tile_06

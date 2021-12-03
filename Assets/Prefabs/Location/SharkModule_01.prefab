@@ -71,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4870059156215173614, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.81
+      value: -8.74
       objectReference: {fileID: 0}
     - target: {fileID: 4870059156215173614, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
       propertyPath: m_LocalPosition.y
@@ -112,6 +112,22 @@ PrefabInstance:
     - target: {fileID: 5250700544416697172, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
       propertyPath: m_Name
       value: SK_Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250700544416697175, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
+      propertyPath: m_Size.x
+      value: 11.111022
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250700544416697175, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
+      propertyPath: m_Size.z
+      value: 6.6303806
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250700544416697175, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
+      propertyPath: m_Center.x
+      value: 0.7070346
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250700544416697175, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}
+      propertyPath: m_Center.z
+      value: 0.2561388
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba64eb9695aeb240a34978bbf0f2c73, type: 3}

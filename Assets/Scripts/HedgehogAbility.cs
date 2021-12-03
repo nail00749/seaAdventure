@@ -2,66 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HedgehogAbility : MonoBehaviour
+public class HedgehogAbility : MonoBehaviour, IAbilities 
 {
-    private ObstacleChecker obstacle;
+    private Enemy enemyObject;
     private bool isUsing;
-    private Vector3 target;
-    private bool _isMove;
     private bool firstPoint;
     private GameObject HeroGroup;
     public bool Using 
     {
         get{return isUsing;}
     }
+    private MoveController moveController;
+    private Vector3 PrevTarget;
 
-    public void UseAbility(GameObject Group, ObstacleChecker obstacleObject)
+    public void UseAbility(GameObject Group, ObstacleChecker enemy, MoveController move)
     {
+        moveController = move;
         HeroGroup = Group;
-        obstacle = obstacleObject;
-        var child = FindChildrenByTag(obstacle.enemyObject.gameObject,"hole");
+        enemyObject = enemy.GetEnemyObject.GetComponent<Enemy>();
+        var child = FindChildrenByTag(enemyObject.gameObject,"hole");
         if(child == null)
             return;
         isUsing = true;
-        transform.localScale = new Vector3(1,1,1);
-        target = child.transform.position;
-        _isMove = true;
+        transform.localScale = new Vector3(0.8f,0.8f,0.8f);
+        moveController.GetTarget = child.transform.position;
+        PrevTarget = child.transform.position;
+        moveController.GetMovesWithoutPhysics = true;
         HeroGroup.GetComponent<Rigidbody>().useGravity = false;
-    }
-
-
-    private void Move()
-    {
-        var targetPos = new Vector3(target.x, target.y, target.z);
-        
-        HeroGroup.transform.position =
-            Vector3.MoveTowards(HeroGroup.transform.position, 
-                targetPos,
-                Time.deltaTime * 15f);
-        
-        var lookPos = targetPos - HeroGroup.transform.position;
-        lookPos.y = 0;
-        if (lookPos != Vector3.zero)
-        {
-            var rotation = Quaternion.LookRotation(lookPos);
-            HeroGroup.transform.rotation = Quaternion.Slerp(HeroGroup.transform.rotation, rotation, Time.deltaTime * 15f);
-        }
-
-        if (Vector3.Distance(HeroGroup.transform.position, target) < 2f && !firstPoint)
-        {
-            firstPoint = true;
-            target.z += 10f;
-            target.y = transform.position.y;
-        }
-        else if(Vector3.Distance(HeroGroup.transform.position, target) < 2f && firstPoint)
-        {
-            isUsing = false;
-            firstPoint = false;
-            _isMove = false;
-            HeroGroup.GetComponent<Rigidbody>().useGravity = true;
-            transform.localScale = new Vector3(1.5f,1.5f,1.5f);
-        }
-        
+        enemyObject.GetComponent<MeshCollider>().isTrigger = true;
     }
 
     private Transform FindChildrenByTag(GameObject parant ,string tag)
@@ -78,11 +46,28 @@ public class HedgehogAbility : MonoBehaviour
         return children;
     }
 
-    private void FixedUpdate() 
+    private void CheckPosition()
     {
-        if(_isMove)
+        if(moveController.GetMovesWithoutPhysics == false && !firstPoint && isUsing == true)
         {
-            Move();
+            moveController.GetTarget = new Vector3(PrevTarget.x, PrevTarget.y, PrevTarget.z + 10f);
+            moveController.GetMovesWithoutPhysics = true;
+            firstPoint = true;
+        }
+        if(moveController.GetMovesWithoutPhysics == false && firstPoint == true)
+        {
+            isUsing = false;
+            firstPoint = false;
+            HeroGroup.GetComponent<Rigidbody>().useGravity = true;
+            transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+            enemyObject.GetComponent<MeshCollider>().isTrigger = false;
+        }
+    }
+
+    private void FixedUpdate() 
+    {   if(moveController != null)
+        {
+            CheckPosition();
         }
     }
 }

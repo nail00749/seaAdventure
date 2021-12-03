@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 665166849683332760}
   - component: {fileID: 4509508596025954621}
   - component: {fileID: 1832975378065548791}
-  - component: {fileID: 5583115752451880600}
   - component: {fileID: 3644592170187120648}
+  - component: {fileID: 4601654166630646225}
   m_Layer: 0
   m_Name: SM_Cable
   m_TagString: obstacle
@@ -89,19 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5583115752451880600
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175909856632226850}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 29.081297, y: 7.57273, z: 7.767461}
-  m_Center: {x: -5.11102, y: 4.192739, z: 6.5134645}
 --- !u!114 &3644592170187120648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +102,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: eel
+--- !u!64 &4601654166630646225
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175909856632226850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8007721637781835636, guid: d487db49e23925b47a90bd7b7cebbbc0, type: 3}
 --- !u!1 &3784622653494990380
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3784622653494990380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: 5.172705, z: 17.29}
+  m_LocalPosition: {x: -11.94, y: 5.37, z: 17.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 665166849683332760}

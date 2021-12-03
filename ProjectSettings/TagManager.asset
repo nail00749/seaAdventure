@@ -9,6 +9,7 @@ TagManager:
   - hole
   - dust
   - road
+  - Group
   layers:
   - Default
   - TransparentFX

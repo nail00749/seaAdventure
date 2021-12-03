@@ -6,7 +6,8 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     private Vector3 Offset;
-    public GameObject HeroGroup;
+    [SerializeField]
+    private GameObject HeroGroup;
 
     // Start is called before the first frame update
     void Start()

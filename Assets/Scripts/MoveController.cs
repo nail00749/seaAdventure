@@ -11,9 +11,25 @@ public class MoveController : MonoBehaviour
     [SerializeField]
     private UsingAbilities usingAbilities;
 
+    [SerializeField]
+    private ObstacleChecker obstacle;
+
+    private Vector3 targetPoint;
+    public Vector3 GetTarget
+    {
+        get {return targetPoint;}
+        set {targetPoint = value;}
+    }
+    private bool movesWithoutPhysics;
+    public bool GetMovesWithoutPhysics
+    {
+        get{return movesWithoutPhysics;}
+        set{movesWithoutPhysics = value;}
+    }
+
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0) && !usingAbilities.Using)
+        if (Input.GetMouseButton(0) && !usingAbilities.Using && !obstacle.GetCollide)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -29,42 +45,16 @@ public class MoveController : MonoBehaviour
         {
             Move();
         }
-
+        if(movesWithoutPhysics)
+        {
+            NotPhysicalMovement();
+        }
         
     }
 
     public void Move()
     {
-        /*!!!
-        if (Vector3.Distance(gameObject.transform.position, _mouseTarget) < 1f)
-        {
-            _isMove = false;
-        }
-
-        Vector3 target = new Vector3(_mouseTarget.x, 3, _mouseTarget.z);
         
-        gameObject.transform.position =
-            Vector3.MoveTowards(gameObject.transform.position, 
-                target,
-                Time.deltaTime * 10f);
-        */
-        /*Vector3 direction = (_mouseTarget - gameObject.transform.position);
-        if (direction != Vector3.zero) {
-            Quaternion rotation = Quaternion.LookRotation(-direction);
-            gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, rotation, 10f * Time.deltaTime);
-        }*/
-
-        /*!!!
-        var lookPos = _mouseTarget - transform.position;
-        lookPos.y = 0;
-        if (lookPos != Vector3.zero)
-        {
-            var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10f);
-        }
-        */
-        
-
         Vector3 target = new Vector3(_mouseTarget.x, 3, _mouseTarget.z);
         var direction = target - transform.position;
         var rigidBody = GetComponent<Rigidbody>();
@@ -86,6 +76,28 @@ public class MoveController : MonoBehaviour
         if(Vector3.Distance(target, transform.position) < 1f)
         {
             _isMove = false;
+        }
+    }
+
+    private void NotPhysicalMovement()
+    {
+        var targetPos = new Vector3(targetPoint.x, targetPoint.y, targetPoint.z);
+        
+        transform.position =
+            Vector3.MoveTowards(transform.position, 
+                targetPos,
+                Time.deltaTime * 15f);
+        
+        var lookPos = targetPos - transform.position;
+        lookPos.y = 0;
+        if (lookPos != Vector3.zero)
+        {
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 15f);
+        }
+        if (Vector3.Distance(gameObject.transform.position, targetPoint) < 2f)
+        {
+            movesWithoutPhysics = false;
         }
     }
     

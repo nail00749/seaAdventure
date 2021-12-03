@@ -66,6 +66,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2430474098959024516}
     m_Modifications:
+    - target: {fileID: 6486704799909777882, guid: 8ff7c24dc3d9ae24d9c6aed89bd05e4f, type: 3}
+      propertyPath: m_Size.x
+      value: 5.6838274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486704799909777882, guid: 8ff7c24dc3d9ae24d9c6aed89bd05e4f, type: 3}
+      propertyPath: m_Center.x
+      value: -18.336115
+      objectReference: {fileID: 0}
     - target: {fileID: 7338850874311213287, guid: 8ff7c24dc3d9ae24d9c6aed89bd05e4f, type: 3}
       propertyPath: m_Name
       value: SM_Tile_06
@@ -175,6 +183,22 @@ PrefabInstance:
     - target: {fileID: 665166849683332760, guid: 167db9d3c5d29f343b7b0899ee32a25c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583115752451880600, guid: 167db9d3c5d29f343b7b0899ee32a25c, type: 3}
+      propertyPath: m_Size.y
+      value: 4.9838505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583115752451880600, guid: 167db9d3c5d29f343b7b0899ee32a25c, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5040951
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583115752451880600, guid: 167db9d3c5d29f343b7b0899ee32a25c, type: 3}
+      propertyPath: m_Center.y
+      value: 2.8982987
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583115752451880600, guid: 167db9d3c5d29f343b7b0899ee32a25c, type: 3}
+      propertyPath: m_Center.z
+      value: 3.381782
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167db9d3c5d29f343b7b0899ee32a25c, type: 3}
