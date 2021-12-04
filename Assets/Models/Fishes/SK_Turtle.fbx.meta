@@ -2,15 +2,16 @@ fileFormatVersion: 2
 guid: 5e5578df118f260468d6acd3c463e0e6
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Turtle
-    second: {fileID: 2100000, guid: 77d5b12374a2ae44e874d3fb18a9b03f, type: 2}
+      74: -3327594323676904628
+    second: Armature|static
+  - first:
+      74: 2143856235881189617
+    second: Armature|swim
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -99,7 +100,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

@@ -2,15 +2,19 @@ fileFormatVersion: 2
 guid: 6fd3ab00b52f3af43a00957e7fb6ef04
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Hammer
-    second: {fileID: 2100000, guid: 77d5b12374a2ae44e874d3fb18a9b03f, type: 2}
+      74: -7615745678665460629
+    second: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430|action"
+  - first:
+      74: 642007934396443138
+    second: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430|static"
+  - first:
+      74: -4588379670181393854
+    second: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430|swim"
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -99,7 +103,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
