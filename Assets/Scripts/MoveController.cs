@@ -14,6 +14,9 @@ public class MoveController : MonoBehaviour
     [SerializeField]
     private ObstacleChecker obstacle;
 
+    [SerializeField]
+    private HeroChanger heroChanger;
+
     private Vector3 targetPoint;
     public Vector3 GetTarget
     {
@@ -29,12 +32,14 @@ public class MoveController : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         if (Input.GetMouseButton(0) && !usingAbilities.Using && !obstacle.GetCollide)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100) && hit.collider.tag == "ground")
             {
+                usingAbilities.GetHeroes[heroChanger.GetActiveHeroIndex].StartMoveAnim();
                 _isMove = true;
                 _mouseTarget = hit.point;
                 _lookPos = _mouseTarget - transform.position;
@@ -54,7 +59,6 @@ public class MoveController : MonoBehaviour
 
     public void Move()
     {
-        
         Vector3 target = new Vector3(_mouseTarget.x, 3, _mouseTarget.z);
         var direction = target - transform.position;
         var rigidBody = GetComponent<Rigidbody>();
@@ -73,6 +77,10 @@ public class MoveController : MonoBehaviour
                 
         }  
         target.y = transform.position.y;
+        if(Vector3.Distance(target, transform.position) < 5f)
+        {
+            usingAbilities.GetHeroes[heroChanger.GetActiveHeroIndex].StopMoveAnim();
+        }
         if(Vector3.Distance(target, transform.position) < 1f)
         {
             _isMove = false;

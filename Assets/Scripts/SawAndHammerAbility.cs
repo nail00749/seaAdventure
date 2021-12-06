@@ -39,12 +39,12 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
             enemyObject = enemy.GetEnemyObject.GetComponent<Enemy>();
             HeroGroup = Group;
             isUsing = true;
+            GetComponent<Hero>().StartAbilityAnim();
             dustActive = true;
             //moveController.GetTarget = new Vector3(transform.position.x,transform.position.y, transform.position.z + 5f);
             //moveController.GetMovesWithoutPhysics = true;
             dust.Play();
             moved = true;
-            isUsing = false;
         }
     }
 
@@ -79,12 +79,13 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
         if(dust.isStopped)
         {
             isUsing = false;
+            GetComponent<Hero>().StopAbilityAnim();
         }
     }
 
     private void FixedUpdate() 
     {
-        MoveCheck();
+        //MoveCheck();
         DustCheck();
     }
 }

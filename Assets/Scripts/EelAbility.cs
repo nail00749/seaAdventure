@@ -6,7 +6,6 @@ public class EelAbility : MonoBehaviour, IAbilities
 {
     private bool isUsing;
     private Enemy enemyObject;
-    private Hero hero;
     private GameObject HeroGroup;
     private MoveController moveController;
     public EelAbility()
@@ -28,6 +27,7 @@ public class EelAbility : MonoBehaviour, IAbilities
         if(child == null)
             return;
         isUsing = true;
+        GetComponent<Hero>().StartAbilityAnim();
         moveController.GetMovesWithoutPhysics = true;
         moveController.GetTarget = child.transform.position;
         enemyObject.GetComponent<MeshCollider>().isTrigger = true;
@@ -55,6 +55,7 @@ public class EelAbility : MonoBehaviour, IAbilities
             {
                 isUsing = false;
                 enemyObject.GetComponent<MeshCollider>().isTrigger = false;
+                GetComponent<Hero>().StopAbilityAnim();
             }
         }
     }

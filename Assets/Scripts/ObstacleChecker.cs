@@ -18,8 +18,6 @@ public class ObstacleChecker : MonoBehaviour
     private Button UseAbilityButton;
     [SerializeField]
     private Button ChangeHeroButton;
-    [SerializeField]
-    private Button MoveOnButton;
     private GameObject enemyObject;
     private int prevHeroIndex;
     private bool collide;
@@ -44,6 +42,7 @@ public class ObstacleChecker : MonoBehaviour
         {
             collide = true;
             heroGroupMoveController._isMove = false;
+            Heroes[heroGroupHeroChanger.GetActiveHeroIndex].GetComponent<Hero>().StopMoveAnim();
             enemyObject = other.gameObject;
             CheckHeroAndEnemy();
         }
@@ -53,18 +52,16 @@ public class ObstacleChecker : MonoBehaviour
     {
         var currentPassingObject = enemyObject.GetComponent<Enemy>().passingObject;
         var currentHeroName = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].GetHeroName;
-
+        Debug.Log(currentHeroName + " - Hero| " + currentPassingObject + " - Object");
         if (currentPassingObject == currentHeroName)
         {
             collide = false;
             UseAbilityButton.gameObject.SetActive(true);
-            MoveOnButton.gameObject.SetActive(true);
         }
         else
         {
             prevHeroIndex = heroGroupHeroChanger.GetActiveHeroIndex;
             ChangeHeroButton.gameObject.SetActive(true);
-            MoveOnButton.gameObject.SetActive(true);
         }
     }
 
@@ -73,7 +70,6 @@ public class ObstacleChecker : MonoBehaviour
         collide = false;
         UseAbilityButton.gameObject.SetActive(false);
         ChangeHeroButton.gameObject.SetActive(false);
-        MoveOnButton.gameObject.SetActive(false);
     }
 
     private void FixedUpdate() 
@@ -83,13 +79,5 @@ public class ObstacleChecker : MonoBehaviour
             ChangeHeroButton.gameObject.SetActive(false);
             CheckHeroAndEnemy();
         }
-    }
-
-    public void MoveOn()
-    {
-        collide = false;
-        UseAbilityButton.gameObject.SetActive(false);
-        ChangeHeroButton.gameObject.SetActive(false);
-        MoveOnButton.gameObject.SetActive(false);
     }
 }

@@ -15,8 +15,6 @@ public class UsingAbilities : MonoBehaviour
     private ObstacleChecker obstacle;
     [SerializeField]
     private Button UseAbilityButton;
-    [SerializeField]
-    private Button MoveOnButton;
     private bool isUsing = false;
     [SerializeField]
     private GameObject HeroGroup;
@@ -32,7 +30,6 @@ public class UsingAbilities : MonoBehaviour
 
     public void UseAbilities()
     {
-        MoveOnButton.gameObject.SetActive(false);
         UseAbilityButton.gameObject.SetActive(false);
         isUsing = true;
         heroes[heroChanger.GetActiveHeroIndex]
