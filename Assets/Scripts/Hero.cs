@@ -15,13 +15,20 @@ public class Hero : MonoBehaviour
     public void StartMoveAnim()
     {
         var anim = GetComponent<Animator>();
-        anim.SetTrigger("StartWalk");
+        if(!anim.GetBool("Swim"))
+        {
+            anim.SetBool("Swim", true);
+        }
+        
     }
 
     public void StopMoveAnim()
     {
         var anim = GetComponent<Animator>();
-        anim.SetTrigger("StopWalk");
+         if(anim.GetBool("Swim"))
+        {
+            anim.SetBool("Swim", false);
+        }
     }
 
     public void StartAbilityAnim()

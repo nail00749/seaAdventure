@@ -8,18 +8,9 @@ public class EnemyFish : MonoBehaviour
     {
         if(other.gameObject.tag == "Group")
         {
-            var index = other.gameObject.GetComponent<HeroChanger>().GetActiveHeroIndex;
-            var heroes = other.gameObject.GetComponent<UsingAbilities>().GetHeroes;
-            var passigObject = GetComponent<Enemy>().passingObject;
-            var heroName = heroes[index].GetHeroName;
-            if(passigObject == heroName)
-            {
-                Debug.Log(passigObject  + "=" + heroName + "= True");
-            }
-            else
-            {
-                Debug.Log(passigObject  + "=" + heroName + "= False");
-            }
+            
+            
         }
     }
+
 }

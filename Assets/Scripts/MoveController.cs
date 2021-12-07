@@ -63,6 +63,11 @@ public class MoveController : MonoBehaviour
         var direction = target - transform.position;
         var rigidBody = GetComponent<Rigidbody>();
         
+        if(Vector3.Distance(target, transform.position) < 5f)
+        {
+            usingAbilities.GetHeroes[heroChanger.GetActiveHeroIndex].StopMoveAnim();
+        }
+
         if (rigidBody.velocity.magnitude > 10f) 
         {
             rigidBody.velocity = rigidBody.velocity.normalized * 10f;
@@ -77,10 +82,6 @@ public class MoveController : MonoBehaviour
                 
         }  
         target.y = transform.position.y;
-        if(Vector3.Distance(target, transform.position) < 5f)
-        {
-            usingAbilities.GetHeroes[heroChanger.GetActiveHeroIndex].StopMoveAnim();
-        }
         if(Vector3.Distance(target, transform.position) < 1f)
         {
             _isMove = false;

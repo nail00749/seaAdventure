@@ -32,7 +32,8 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
         if(enemy.GetEnemyObject.GetComponent<EnemyFish>() != null)
         {
             enemyFish = enemy.GetEnemyObject.GetComponent<EnemyFish>();
-            
+            GetComponent<Hero>().StartAbilityAnim();
+            GetComponent<Hero>().StopAbilityAnim();
         }
         else
         {
@@ -41,22 +42,8 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
             isUsing = true;
             GetComponent<Hero>().StartAbilityAnim();
             dustActive = true;
-            //moveController.GetTarget = new Vector3(transform.position.x,transform.position.y, transform.position.z + 5f);
-            //moveController.GetMovesWithoutPhysics = true;
             dust.Play();
             moved = true;
-        }
-    }
-
-    private void MoveCheck()
-    {
-        if(moveController != null)
-        {
-            if(isUsing && moveController.GetMovesWithoutPhysics == false)
-            {
-                dust.Play();
-                moved = true;
-            }
         }
     }
 
@@ -68,24 +55,15 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
             {   
                 GameObject.Destroy(enemyObject.gameObject);
                 dustActive = false;
-            }
-            /*if(!dustActive)
-            {
                 isUsing = false;
-                moved = false;
+                GetComponent<Hero>().StopAbilityAnim();
+                dust.Stop();
             }
-            */
-        }
-        if(dust.isStopped)
-        {
-            isUsing = false;
-            GetComponent<Hero>().StopAbilityAnim();
         }
     }
 
     private void FixedUpdate() 
     {
-        //MoveCheck();
         DustCheck();
     }
 }

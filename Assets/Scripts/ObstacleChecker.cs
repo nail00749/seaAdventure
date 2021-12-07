@@ -52,7 +52,6 @@ public class ObstacleChecker : MonoBehaviour
     {
         var currentPassingObject = enemyObject.GetComponent<Enemy>().passingObject;
         var currentHeroName = Heroes[heroGroupHeroChanger.GetActiveHeroIndex].GetHeroName;
-        Debug.Log(currentHeroName + " - Hero| " + currentPassingObject + " - Object");
         if (currentPassingObject == currentHeroName)
         {
             collide = false;

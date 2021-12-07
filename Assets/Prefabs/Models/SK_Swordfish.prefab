@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6873139138373138416}
   - component: {fileID: 3951728359405716204}
   - component: {fileID: 996839737219981843}
-  - component: {fileID: 3370615676114403919}
+  - component: {fileID: 8414834993573823668}
+  - component: {fileID: 6231897582843645871}
   m_Layer: 0
   m_Name: SK_Swordfish
   m_TagString: obstacle
@@ -46,7 +47,7 @@ Animator:
   m_GameObject: {fileID: 200893803670615856}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5e35b89994886e54ca25eaba16e9dd79, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 924fed44089a17b40b5c140d94e03105, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -80,7 +81,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0752d97091e87d646b1d73dbedb33cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &3370615676114403919
+--- !u!65 &8414834993573823668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200893803670615856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 11.151316, y: 5.4141655, z: 14.501715}
+  m_Center: {x: -0.57565784, y: -1.5646472, z: 2.2508574}
+--- !u!64 &6231897582843645871
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

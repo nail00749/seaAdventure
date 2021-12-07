@@ -24,7 +24,7 @@ public class HedgehogAbility : MonoBehaviour, IAbilities
         if(child == null)
             return;
         isUsing = true;
-        transform.localScale = new Vector3(0.8f,0.8f,0.8f);
+        GetComponent<Hero>().StartAbilityAnim();
         moveController.GetTarget = child.transform.position;
         PrevTarget = child.transform.position;
         moveController.GetMovesWithoutPhysics = true;
@@ -59,7 +59,7 @@ public class HedgehogAbility : MonoBehaviour, IAbilities
             isUsing = false;
             firstPoint = false;
             HeroGroup.GetComponent<Rigidbody>().useGravity = true;
-            transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+            GetComponent<Hero>().StopAbilityAnim();
             enemyObject.GetComponent<MeshCollider>().isTrigger = false;
         }
     }
