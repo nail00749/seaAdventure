@@ -583,7 +583,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 963194231}
-        m_TargetAssemblyTypeName: MenuControls, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuPauseController, Assembly-CSharp
         m_MethodName: PlayPressed
         m_Mode: 1
         m_Arguments:
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 963194231}
-        m_TargetAssemblyTypeName: MenuControls, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuPauseController, Assembly-CSharp
         m_MethodName: ExitPressed
         m_Mode: 1
         m_Arguments:
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 787786018}
   - component: {fileID: 787786017}
   m_Layer: 0
-  m_Name: Button
+  m_Name: InfoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,7 +1040,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 963194231}
-        m_TargetAssemblyTypeName: MenuControls, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuPauseController, Assembly-CSharp
         m_MethodName: InfoPressed
         m_Mode: 1
         m_Arguments:
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff16d4172aef7514bbf901bc312aaa45, type: 3}
+  m_Script: {fileID: 11500000, guid: a418a4765dfb0474eb2f9ece72502f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ExitButton: {fileID: 501607129}
