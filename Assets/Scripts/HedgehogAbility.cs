@@ -20,16 +20,18 @@ public class HedgehogAbility : MonoBehaviour, IAbilities
         moveController = move;
         HeroGroup = Group;
         enemyObject = enemy.GetEnemyObject.GetComponent<Enemy>();
+        isUsing = true;
+        GetComponent<Hero>().StartAbilityAnim();
         var child = FindChildrenByTag(enemyObject.gameObject,"hole");
         if(child == null)
             return;
-        isUsing = true;
-        GetComponent<Hero>().StartAbilityAnim();
         moveController.GetTarget = child.transform.position;
         PrevTarget = child.transform.position;
         moveController.GetMovesWithoutPhysics = true;
         HeroGroup.GetComponent<Rigidbody>().useGravity = false;
         enemyObject.GetComponent<MeshCollider>().isTrigger = true;
+                
+       
     }
 
     private Transform FindChildrenByTag(GameObject parant ,string tag)
@@ -50,7 +52,7 @@ public class HedgehogAbility : MonoBehaviour, IAbilities
     {
         if(moveController.GetMovesWithoutPhysics == false && !firstPoint && isUsing == true)
         {
-            moveController.GetTarget = new Vector3(PrevTarget.x, PrevTarget.y, PrevTarget.z + 10f);
+            moveController.GetTarget = new Vector3(PrevTarget.x, 5.3f, PrevTarget.z + 10f);
             moveController.GetMovesWithoutPhysics = true;
             firstPoint = true;
         }

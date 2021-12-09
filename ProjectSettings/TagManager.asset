@@ -10,6 +10,7 @@ TagManager:
   - dust
   - road
   - Group
+  - obstacleChecker
   layers:
   - Default
   - TransparentFX

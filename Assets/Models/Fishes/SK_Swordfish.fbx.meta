@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -1923731024735278414
-    second: Armature|action
+    second: Armature|Attack
   - first:
       74: -3327594323676904628
     second: Armature|static
@@ -41,7 +41,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|action
+      name: Armature|Attack
       takeName: Armature|action
       internalID: 0
       firstFrame: 0

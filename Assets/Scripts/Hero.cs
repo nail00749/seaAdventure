@@ -25,7 +25,7 @@ public class Hero : MonoBehaviour
     public void StopMoveAnim()
     {
         var anim = GetComponent<Animator>();
-         if(anim.GetBool("Swim"))
+        if(anim.GetBool("Swim"))
         {
             anim.SetBool("Swim", false);
         }
@@ -34,13 +34,19 @@ public class Hero : MonoBehaviour
     public void StartAbilityAnim()
     {
         var anim = GetComponent<Animator>();
-        anim.SetTrigger("StartAbility");
+        if(!anim.GetBool("Ability"))
+        {
+            anim.SetBool("Ability", true);
+        }
     }
 
     public void StopAbilityAnim()
     {
         var anim = GetComponent<Animator>();
-        anim.SetTrigger("StopAbility");
+        if(anim.GetBool("Ability"))
+        {
+            anim.SetBool("Ability", false);
+        }
     }
 
 }

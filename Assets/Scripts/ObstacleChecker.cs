@@ -21,7 +21,6 @@ public class ObstacleChecker : MonoBehaviour
     private GameObject enemyObject;
     private int prevHeroIndex;
     private bool collide;
-
     public bool GetCollide
     {
         get {return collide;}

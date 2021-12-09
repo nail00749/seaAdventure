@@ -5,8 +5,8 @@ using UnityEngine;
 public class SawAndHammerAbility : MonoBehaviour, IAbilities
 {
     private bool isUsing;
-    private bool moved;
     private bool dustActive;
+    private bool ThisEnemyFish;
     private MoveController moveController;
     [SerializeField]
     private ParticleSystem dust;
@@ -17,7 +17,6 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
     public SawAndHammerAbility()
     {
         isUsing = false;
-        moved = false;
         dustActive = false;
     }
 
@@ -33,7 +32,9 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
         {
             enemyFish = enemy.GetEnemyObject.GetComponent<EnemyFish>();
             GetComponent<Hero>().StartAbilityAnim();
-            GetComponent<Hero>().StopAbilityAnim();
+            isUsing = true;
+            ThisEnemyFish = true;
+            enemyFish.GetComponent<EnemyFish>().SetMove = true;
         }
         else
         {
@@ -43,19 +44,17 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
             GetComponent<Hero>().StartAbilityAnim();
             dustActive = true;
             dust.Play();
-            moved = true;
         }
     }
 
     private void DustCheck()
     {
-        if(dustActive && moved)
+        if(dustActive)
         {
             if(dust.time > 3.9f)
             {   
                 GameObject.Destroy(enemyObject.gameObject);
                 dustActive = false;
-                isUsing = false;
                 GetComponent<Hero>().StopAbilityAnim();
                 dust.Stop();
             }
@@ -64,6 +63,23 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
 
     private void FixedUpdate() 
     {
-        DustCheck();
+        if(!ThisEnemyFish)
+        {
+            DustCheck();
+            if(dust.isStopped && dust.particleCount < 5)
+            {
+                isUsing = false;
+            }
+        }
+        else
+        {
+            if(enemyFish.FishEscapes)
+            {
+                GetComponent<Hero>().StopAbilityAnim();
+                isUsing = false;
+                ThisEnemyFish = false;
+            }
+        }
+
     }
 }

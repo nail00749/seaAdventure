@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6410205176771700274}
   - component: {fileID: 3200432747386206143}
   - component: {fileID: 8305017914319609766}
+  - component: {fileID: 378176303}
   m_Layer: 0
   m_Name: SK_Eel
   m_TagString: Untagged
@@ -76,7 +77,7 @@ Animator:
   m_GameObject: {fileID: 386856420401047282}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6a4151fea2ad377459c66b797b22aff0, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b665faf03210e9e4595e310dd2f26abb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,6 +111,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71af4df55d1449144850158d43934f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &378176303
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386856420401047282}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &451882683747428837
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,8 +338,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1479516235631455831}
   m_AABB:
-    m_Center: {x: -0.0035356283, y: 0.0076511893, z: 0.00041185087}
-    m_Extent: {x: 0.031052742, y: 0.050985076, z: 0.008267343}
+    m_Center: {x: -0.0035356283, y: 0.0076511875, z: 0.0014346188}
+    m_Extent: {x: 0.031052742, y: 0.050985076, z: 0.007244576}
   m_DirtyAABB: 0
 --- !u!1 &5440222997607256105
 GameObject:
