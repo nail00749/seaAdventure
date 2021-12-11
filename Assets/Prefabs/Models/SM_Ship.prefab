@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1530209490497158471}
   - component: {fileID: 3663838986407987597}
   - component: {fileID: 2483168675421686500}
-  - component: {fileID: 3027773041194488378}
+  - component: {fileID: 7291883458121563277}
   m_Layer: 0
   m_Name: SM_Ship
   m_TagString: obstacle
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: saw
---- !u!64 &3027773041194488378
-MeshCollider:
+--- !u!65 &7291883458121563277
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,7 +109,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1731436766712664049, guid: 39deee5da9543074ab78ca85632fd4b3, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 22.188812, y: 8.72698, z: 8.819275}
+  m_Center: {x: -11.314337, y: 3.4321957, z: 9.240332}

@@ -30,8 +30,6 @@ public class HedgehogAbility : MonoBehaviour, IAbilities
         moveController.GetMovesWithoutPhysics = true;
         HeroGroup.GetComponent<Rigidbody>().useGravity = false;
         enemyObject.GetComponent<MeshCollider>().isTrigger = true;
-                
-       
     }
 
     private Transform FindChildrenByTag(GameObject parant ,string tag)

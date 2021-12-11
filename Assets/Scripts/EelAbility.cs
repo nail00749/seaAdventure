@@ -30,7 +30,7 @@ public class EelAbility : MonoBehaviour, IAbilities
         GetComponent<Hero>().StartAbilityAnim();
         moveController.GetMovesWithoutPhysics = true;
         moveController.GetTarget = child.transform.position;
-        enemyObject.GetComponent<MeshCollider>().isTrigger = true;
+        enemyObject.GetComponent<BoxCollider>().isTrigger = true;
     }
 
      private Transform FindChildrenByTag(GameObject parant ,string tag)
@@ -54,7 +54,7 @@ public class EelAbility : MonoBehaviour, IAbilities
             if(moveController.GetMovesWithoutPhysics == false && isUsing == true)
             {
                 isUsing = false;
-                enemyObject.GetComponent<MeshCollider>().isTrigger = false;
+                enemyObject.GetComponent<BoxCollider>().isTrigger = false;
                 GetComponent<Hero>().StopAbilityAnim();
             }
         }

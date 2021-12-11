@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4509508596025954621}
   - component: {fileID: 1832975378065548791}
   - component: {fileID: 3644592170187120648}
-  - component: {fileID: 4601654166630646225}
+  - component: {fileID: 8181231590104748521}
   m_Layer: 0
   m_Name: SM_Cable
   m_TagString: obstacle
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: eel
---- !u!64 &4601654166630646225
-MeshCollider:
+--- !u!65 &8181231590104748521
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,10 +112,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8007721637781835636, guid: d487db49e23925b47a90bd7b7cebbbc0, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 29.117182, y: 10.006219, z: 6.2148495}
+  m_Center: {x: -5.0930777, y: 2.9759946, z: 5.737159}
 --- !u!1 &3784622653494990380
 GameObject:
   m_ObjectHideFlags: 0

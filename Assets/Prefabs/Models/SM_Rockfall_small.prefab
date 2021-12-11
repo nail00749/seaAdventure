@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 816676170491145202}
   - component: {fileID: 3220528860595904312}
   - component: {fileID: 5691138291594888130}
-  - component: {fileID: 6651861196975490047}
+  - component: {fileID: 5423887713689174228}
   m_Layer: 0
   m_Name: SM_Rockfall_small
   m_TagString: obstacle
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: hammer
---- !u!64 &6651861196975490047
-MeshCollider:
+--- !u!65 &5423887713689174228
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,7 +108,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5997842756877180274, guid: d381175e667a09d4cbe81f8b8395164c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 20.662127, y: 10.364143, z: 7.8923397}
+  m_Center: {x: -15.134728, y: 3.164589, z: 11.011212}

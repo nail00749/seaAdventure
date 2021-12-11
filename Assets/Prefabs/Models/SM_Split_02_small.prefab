@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4316516740931801914}
   - component: {fileID: 1515339988076844467}
   - component: {fileID: 5110850833892783525}
-  - component: {fileID: 9210304342514087215}
+  - component: {fileID: 8549191003950641432}
+  - component: {fileID: 1836569869750632940}
   m_Layer: 0
   m_Name: SM_Split_02_small
   m_TagString: obstacle
@@ -99,7 +100,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passingObject: hedgehog
---- !u!64 &9210304342514087215
+--- !u!65 &8549191003950641432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156187287272945530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 32.138145, y: 4.051914, z: 6.1935806}
+  m_Center: {x: -18.289062, y: -2.091124, z: 10.011156}
+--- !u!64 &1836569869750632940
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

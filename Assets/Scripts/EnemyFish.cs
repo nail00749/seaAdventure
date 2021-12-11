@@ -25,6 +25,7 @@ public class EnemyFish : MonoBehaviour
             Debug.Log("True");
             targetPoint = other.transform.position;
             targetPoint.z += 4f;
+            targetPoint.y = transform.position.y;
             var anim = GetComponent<Animator>();
             if(!anim.GetBool("Swim"))
                 anim.SetBool("Swim",true);
