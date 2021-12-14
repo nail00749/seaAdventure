@@ -201,7 +201,8 @@ GameObject:
   - component: {fileID: 159752215}
   - component: {fileID: 159752214}
   - component: {fileID: 159752213}
-  m_Layer: 0
+  - component: {fileID: 159752216}
+  m_Layer: 5
   m_Name: UseAbilityButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 175}
+  m_AnchoredPosition: {x: 0, y: -199}
   m_SizeDelta: {x: 204, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159752213
@@ -321,6 +322,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159752211}
   m_CullTransparentMesh: 1
+--- !u!65 &159752216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159752211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 209.33426, y: 101.071976, z: 0}
+  m_Center: {x: -2.8144639, y: 0, z: 4.5864396}
 --- !u!1001 &186125105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,7 +403,7 @@ GameObject:
   - component: {fileID: 210837914}
   - component: {fileID: 210837916}
   - component: {fileID: 210837915}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +525,7 @@ GameObject:
   - component: {fileID: 488987834}
   - component: {fileID: 488987833}
   - component: {fileID: 488987832}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,8 +548,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -361.5, y: 197}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: -300, y: 165}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488987832
 MonoBehaviour:
@@ -643,7 +657,7 @@ GameObject:
   - component: {fileID: 498593889}
   - component: {fileID: 498593888}
   - component: {fileID: 498593887}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +789,7 @@ GameObject:
   - component: {fileID: 501607131}
   - component: {fileID: 501607130}
   - component: {fileID: 501607129}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1021,7 +1035,8 @@ GameObject:
   - component: {fileID: 787786019}
   - component: {fileID: 787786018}
   - component: {fileID: 787786017}
-  m_Layer: 0
+  - component: {fileID: 787786020}
+  m_Layer: 5
   m_Name: InfoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,7 +1059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 364, y: 186}
+  m_AnchoredPosition: {x: -375, y: -200}
   m_SizeDelta: {x: 341, y: 341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787786017
@@ -1141,6 +1156,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787786015}
   m_CullTransparentMesh: 1
+--- !u!65 &787786020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787786015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 350.1029, y: 336.36417, z: 0}
+  m_Center: {x: -3.2269945, y: -0.47151035, z: 2.0572703}
 --- !u!1001 &882130992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1655,7 +1683,7 @@ GameObject:
   - component: {fileID: 1398390546}
   - component: {fileID: 1398390545}
   - component: {fileID: 1398390544}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SawfishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,8 +1706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -362.4, y: -6}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: 300, y: 165}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398390544
 MonoBehaviour:
@@ -1808,7 +1836,7 @@ GameObject:
   - component: {fileID: 1421472056}
   - component: {fileID: 1421472055}
   - component: {fileID: 1421472054}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1933,7 +1961,7 @@ GameObject:
   - component: {fileID: 1945275618}
   - component: {fileID: 1945275617}
   - component: {fileID: 1945275616}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HammerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1956,8 +1984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -362.1, y: 148}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: -150, y: 165}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945275616
 MonoBehaviour:
@@ -2127,7 +2155,7 @@ GameObject:
   - component: {fileID: 1979405704}
   - component: {fileID: 1979405703}
   - component: {fileID: 1979405702}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TurtleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2150,8 +2178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -362.4, y: 51}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: 150, y: 165}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979405702
 MonoBehaviour:
@@ -2328,7 +2356,7 @@ GameObject:
   - component: {fileID: 2033408107}
   - component: {fileID: 2033408106}
   - component: {fileID: 2033408105}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HedgehogButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,8 +2379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365.4, y: 99}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: 0, y: 165}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033408105
 MonoBehaviour:

@@ -66,7 +66,7 @@ public class SawAndHammerAbility : MonoBehaviour, IAbilities
         if(!ThisEnemyFish)
         {
             DustCheck();
-            if(dust.isStopped && dust.particleCount < 5)
+            if(dust.isStopped && dust.particleCount < 100)
             {
                 isUsing = false;
             }
