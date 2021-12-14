@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeroChanger : MonoBehaviour
 {
@@ -6,13 +7,13 @@ public class HeroChanger : MonoBehaviour
     private const int DefaultHeroIndex = 0;
     private int _currentHeroIndex;
     private GameObject _currentHero;
-    
     public int GetActiveHeroIndex
     {
         get { return _currentHeroIndex; }
     }
     [SerializeField]
     private UsingAbilities usingAbilities;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class HeroChanger : MonoBehaviour
         }
     }
 
-    public void ChangeHero()
+    private void ChangeHero()
     {
         _currentHeroIndex++;
         if (_currentHeroIndex >= heroes.Length)
@@ -47,4 +48,21 @@ public class HeroChanger : MonoBehaviour
         heroes[_currentHeroIndex].SetActive(true);
         _currentHero = heroes[_currentHeroIndex];
     }
+
+    public void ChangeActiveHeroIndex(int index)
+    {   
+        if(_currentHeroIndex == index)
+            return;
+        _currentHeroIndex = index;
+        if(!usingAbilities.Using)
+        {
+            foreach (var hero in heroes)
+                hero.SetActive(false);
+
+            heroes[_currentHeroIndex].SetActive(true);
+            _currentHero = heroes[_currentHeroIndex];
+        }
+            
+    }
+
 }
