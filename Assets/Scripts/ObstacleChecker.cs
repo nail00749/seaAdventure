@@ -57,7 +57,7 @@ public class ObstacleChecker : MonoBehaviour
         else
         {
             prevHeroIndex = heroGroupHeroChanger.GetActiveHeroIndex;
-            textObstacle.gameObject.SetActive(true);
+            //textObstacle.gameObject.SetActive(true);
         }
     }
 
@@ -65,14 +65,14 @@ public class ObstacleChecker : MonoBehaviour
     {
         collide = false;
         UseAbilityButton.gameObject.SetActive(false);
-        textObstacle.gameObject.SetActive(false);
+        //textObstacle.gameObject.SetActive(false);
     }
 
     private void FixedUpdate() 
     {
         if(prevHeroIndex != heroGroupHeroChanger.GetActiveHeroIndex && collide)
         {
-            textObstacle.gameObject.SetActive(false);
+            //textObstacle.gameObject.SetActive(false);
             CheckHeroAndEnemy();
         }
     }
